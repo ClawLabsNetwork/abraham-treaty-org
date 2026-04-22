@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Abraham Treaty Organization — Replace NATO. Secure the Future.</title>
+<meta name="description" content="NATO is obsolete. Russia can't beat drones. China is buying the Middle East. The Abraham Treaty Organization is America's 50-year answer.">
+<meta property="og:title" content="The Abraham Treaty Organization">
+<meta property="og:description" content="NATO is obsolete. The ATO is America's next 50 years.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Abraham Treaty Organization">
+<meta name="twitter:description" content="Replace NATO. Secure the dollar. Lock out China. Build the ATO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #080C18;
+    --navy-light: #0E1428;
+    --gold: #C5A44E;
+    --gold-dim: #C5A44E66;
+    --gold-glow: #C5A44E22;
+    --cream: #F5F0E8;
+    --cream-dim: #F5F0E899;
+    --red: #8B1A1A;
+    --red-bright: #D4382C;
+    --blue: #4A90D9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--cream);
+    font-family: 'Source Serif 4', Georgia, serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    z-index: 9999;
+  }
+
+  .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+  .display { font-family: 'Playfair Display', Georgia, serif; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(197,164,78,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(197,164,78,0.03) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.2s;
+  }
+
+  .hero-headline {
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.4s;
+  }
+
+  .hero-headline .gold { color: var(--gold); }
+
+  .hero-sub {
+    font-size: clamp(16px, 2.5vw, 22px);
+    color: var(--cream-dim);
+    max-width: 600px;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.6s;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 16px 40px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 4px;
+    transition: all 0.3s;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.8s;
+  }
+
+  .hero-cta:hover {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1.2s;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 100px 24px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-num {
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: var(--gold-dim);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 32px;
+  }
+
+  .section-title .gold { color: var(--gold); }
+  .section-title .red { color: var(--red-bright); }
+
+  p {
+    font-size: 17px;
+    color: var(--cream-dim);
+    margin-bottom: 24px;
+    max-width: 640px;
+  }
+
+  p strong {
+    color: var(--cream);
+    font-weight: 700;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  }
+
+  /* ── COMPARISON BLOCK ── */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 40px 0;
+  }
+
+  .compare-col {
+    padding: 28px 24px;
+    border: 1px solid;
+    border-radius: 4px;
+  }
+
+  .compare-col.bad {
+    border-color: var(--red);
+    background: rgba(139, 26, 26, 0.08);
+  }
+
+  .compare-col.good {
+    border-color: var(--gold);
+    background: var(--gold-glow);
+  }
+
+  .compare-label {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid;
+  }
+
+  .compare-col.bad .compare-label {
+    color: var(--red-bright);
+    border-color: rgba(139, 26, 26, 0.3);
+  }
+
+  .compare-col.good .compare-label {
+    color: var(--gold);
+    border-color: var(--gold-dim);
+  }
+
+  .compare-item {
+    font-size: 14px;
+    padding: 8px 0 8px 14px;
+    margin-bottom: 4px;
+    border-left: 2px solid;
+  }
+
+  .compare-col.bad .compare-item {
+    color: var(--cream-dim);
+    border-color: rgba(139, 26, 26, 0.3);
+  }
+
+  .compare-col.good .compare-item {
+    color: var(--cream);
+    border-color: var(--gold-dim);
+    font-weight: 600;
+  }
+
+  /* ── PILLARS ── */
+  .pillar {
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(245, 240, 232, 0.06);
+  }
+
+  .pillar:last-child { border-bottom: none; }
+
+  .pillar-num {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .pillar-title {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: var(--cream);
+  }
+
+  .pillar-desc {
+    font-size: 15px;
+    color: var(--cream-dim);
+    line-height: 1.6;
+  }
+
+  /* ── CORE FOUR ── */
+  .core-four {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .core-four-card {
+    padding: 20px;
+    border: 1px solid rgba(74, 144, 217, 0.3);
+    background: rgba(74, 144, 217, 0.05);
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .core-four-flag { font-size: 28px; margin-bottom: 6px; }
+  .core-four-name { font-size: 14px; font-weight: 700; letter-spacing: 1px; }
+
+  /* ── LEGACY ── */
+  .legacy-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(245, 240, 232, 0.05);
+  }
+
+  .legacy-row:last-child { border-bottom: none; }
+
+  .legacy-name {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    min-width: 110px;
+    color: var(--cream-dim);
+  }
+
+  .legacy-achievement {
+    font-size: 15px;
+    color: var(--cream-dim);
+  }
+
+  .legacy-row.highlight .legacy-name {
+    color: var(--gold);
+    font-size: 18px;
+  }
+
+  .legacy-row.highlight .legacy-achievement {
+    color: var(--cream);
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  /* ── CTA SECTION ── */
+  .final-cta {
+    text-align: center;
+    padding: 120px 24px;
+    position: relative;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(197,164,78,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-cta .section-title { max-width: 700px; margin: 0 auto 24px; }
+
+  .final-cta p { margin: 0 auto 40px; text-align: center; }
+
+  .final-tagline {
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    margin-top: 48px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 48px 24px;
+    border-top: 1px solid rgba(245, 240, 232, 0.05);
+  }
+
+  footer p {
+    font-size: 12px;
+    color: rgba(245, 240, 232, 0.3);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .compare { grid-template-columns: 1fr; }
+    .core-four { grid-template-columns: 1fr 1fr; gap: 10px; }
+    section { padding: 72px 20px; }
+    .hero { padding: 40px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HERO ═══════════ -->
+<div class="hero">
+  <div class="hero-label mono">A PROPOSAL FOR AMERICAN STRATEGIC ARCHITECTURE</div>
+  <h1 class="hero-headline display">
+    <span class="gold">NATO</span> is obsolete.<br>
+    Build the <span class="gold">ATO.</span>
+  </h1>
+  <p class="hero-sub">
+    The Abraham Treaty Organization — a 50-year defense and economic alliance that secures the dollar, locks out China, and replaces a Cold War relic with the alliance America actually needs.
+  </p>
+  <a href="#problem" class="hero-cta mono">READ THE CASE ↓</a>
+  <div class="scroll-hint"></div>
+</div>
+
+<!-- ═══════════ SECTION 1: THE PROBLEM ═══════════ -->
+<div class="divider"></div>
+<section id="problem">
+  <div class="section-num mono reveal">01</div>
+  <h2 class="section-title display reveal">
+    NATO was built for a war<br>that <span class="red">ended 35 years ago.</span>
+  </h2>
+  <div class="reveal">
+    <p>
+      NATO was designed in 1949 to stop Soviet tanks from rolling through the Fulda Gap into Western Europe. It was the right alliance for the right threat at the right time.
+    </p>
+    <p>
+      <strong>That threat no longer exists.</strong> The Soviet Union collapsed in 1991. Russia — its successor — just spent three years proving it can't defeat Ukraine, a country with a GDP smaller than Florida's. Russian tanks are being destroyed by $500 drones. Their Black Sea fleet was sunk by a country with no navy.
+    </p>
+    <p>
+      Meanwhile, America pays roughly 70% of NATO's defense costs. Most European members don't hit the 2% GDP spending target they agreed to. Germany spent a decade buying Russian natural gas while expecting America to defend them <em>from</em> Russia. Turkey — a NATO member — bought Russian S-400 missile systems.
+    </p>
+    <p>
+      <strong>NATO isn't an alliance anymore. It's a charity.</strong> And America is the only donor.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 2: THE REAL THREAT ═══════════ -->
+<div class="divider"></div>
+<section>
+  <div class="section-num mono reveal">02</div>
+  <h2 class="section-title display reveal">
+    The real fight is in the<br><span class="gold">Middle East.</span>
+  </h2>
+  <div class="reveal">
+    <p>
+      The strategic competition that will define the next 50 years isn't about European land wars. It's about <strong>energy, the dollar, AI, and China.</strong> And all four of those fights run through the Middle East.
+    </p>
+    <p>
+      China is already moving. Beijing brokered the Saudi-Iran deal in 2023. Chinese trade with Gulf states surged in 2024, making China the region's largest trading partner. Belt and Road investment poured $39 billion into the Middle East that year. The mBridge digital currency platform — designed to bypass the dollar — is processing tens of billions in volume with Gulf state participation.
+    </p>
+    <p>
+      <strong>Every dollar the Gulf invests in Chinese infrastructure is a dollar that doesn't flow through American banks, American Treasuries, or American companies.</strong> Every oil barrel settled in yuan is a crack in the petrodollar system that has anchored American economic power since 1974.
+    </p>
+    <p>
+      China can't offer what America offers — real security guarantees. But China is winning because <strong>America hasn't offered anything binding.</strong> Gulf states are hedging because they have no choice. Give them a choice.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 3: NATO vs ATO ═══════════ -->
+<div class="divider"></div>
+<section>
+  <div class="section-num mono reveal">03</div>
+  <h2 class="section-title display reveal">
+    Two alliances.<br><span class="gold">One choice.</span>
+  </h2>
+
+  <div class="compare reveal">
+    <div class="compare-col bad">
+      <div class="compare-label mono">NATO</div>
+      <div class="compare-item">32 members, only 11 pay their share</div>
+      <div class="compare-item">America covers ~70% of costs</div>
+      <div class="compare-item">Germany bought Russian gas</div>
+      <div class="compare-item">Turkey bought Russian missiles</div>
+      <div class="compare-item">Defends a continent Russia can't threaten</div>
+      <div class="compare-item">COSTS America hundreds of billions/year</div>
+    </div>
+    <div class="compare-col good">
+      <div class="compare-label mono">ATO</div>
+      <div class="compare-item">UAE: $1.4 trillion invested in the USA</div>
+      <div class="compare-item">Saudi Arabia: $1 trillion committed</div>
+      <div class="compare-item">Qatar: $1.2 trillion committed</div>
+      <div class="compare-item">Members buy American weapons at full price</div>
+      <div class="compare-item">All trade denominated in US dollars</div>
+      <div class="compare-item">MAKES America money</div>
+    </div>
+  </div>
+
+  <div class="reveal">
+    <p>
+      NATO is an alliance where America pays to protect countries that won't protect themselves. The ATO would be an alliance where <strong>partner nations invest trillions in American infrastructure, buy American defense systems, and trade exclusively in dollars.</strong>
+    </p>
+    <p>
+      One costs you money. The other makes you money. That's America First.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 4: LEGACY / ARCHITECT KING ═══════════ -->
+<div class="divider"></div>
+<section>
+  <div class="section-num mono reveal">04</div>
+  <h2 class="section-title display reveal">
+    The <span class="gold">Architect King.</span>
+  </h2>
+  <div class="reveal">
+    <p>
+      History remembers the presidents who built things that lasted. Executive orders get reversed. Deals expire. <strong>Treaties endure for generations.</strong>
+    </p>
+
+    <div style="margin: 40px 0;">
+      <div class="legacy-row">
+        <div class="legacy-name mono">TRUMAN</div>
+        <div class="legacy-achievement">Built NATO — lasted 76 years</div>
+      </div>
+      <div class="legacy-row">
+        <div class="legacy-name mono">NIXON</div>
+        <div class="legacy-achievement">Opened China — reshaped the world</div>
+      </div>
+      <div class="legacy-row">
+        <div class="legacy-name mono">REAGAN</div>
+        <div class="legacy-achievement">Ended the Cold War</div>
+      </div>
+      <div class="legacy-row highlight">
+        <div class="legacy-name mono">TRUMP</div>
+        <div class="legacy-achievement">Built the ATO 👑</div>
+      </div>
+    </div>
+
+    <p>
+      The Abraham Accords proved it could be done. The defense agreements, the trillion-dollar investment commitments, the integrated air defense — they're all already in place. All that's missing is a <strong>Senate-ratified treaty</strong> that makes it permanent.
+    </p>
+    <p>
+      One treaty. One vote. One signature. A legacy that lasts 50 years.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 5: WHAT IS THE ATO ═══════════ -->
+<div class="divider"></div>
+<section>
+  <div class="section-num mono reveal">05</div>
+  <h2 class="section-title display reveal">
+    The <span class="gold">Abraham Treaty<br>Organization.</span>
+  </h2>
+  <div class="reveal">
+    <p>
+      The ATO takes the Abraham Accords — the historic normalization agreements President Trump built between Israel and Arab states — and upgrades them into a full NATO-style defense and economic treaty. Senate-ratified. Permanent. Irreversible.
+    </p>
+  </div>
+
+  <div class="reveal">
+    <div class="pillar">
+      <div class="pillar-num mono">PILLAR I</div>
+      <div class="pillar-title display">Mutual Defense</div>
+      <div class="pillar-desc">An Article V-style commitment: an attack on one is an attack on all. The security guarantee Gulf states need to stop hedging toward China. Already proven — Jordan, Saudi Arabia, and Israel jointly intercepted Iranian drones in April 2024.</div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-num mono">PILLAR II</div>
+      <div class="pillar-title display">American Command</div>
+      <div class="pillar-desc">A Supreme Allied Commander Middle East under CENTCOM — always a US four-star general. Just like NATO's SACEUR in Europe. The integrated air defense operations center at Al Udeid is already running. Formalize it.</div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-num mono">PILLAR III</div>
+      <div class="pillar-title display">The Petrodollar Compact</div>
+      <div class="pillar-desc">All member-state oil, defense, and critical mineral trade denominated in US dollars. By treaty. Gulf sovereign wealth funds commit to recycling surpluses into US Treasuries and American infrastructure. mBridge and yuan settlement phased out within 36 months of accession.</div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-num mono">PILLAR IV</div>
+      <div class="pillar-title display">OPEC as Alliance Asset</div>
+      <div class="pillar-desc">OPEC coordination endorsed as compatible with membership — but with an emergency production clause. In a crisis, the alliance can coordinate production releases alongside SPR. OPEC stops being a perceived threat and becomes a strategic tool.</div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-num mono">PILLAR V</div>
+      <div class="pillar-title display">Technology Lock-In</div>
+      <div class="pillar-desc">Members adopt US export controls. No Huawei, no ZTE, no Alibaba Cloud in critical infrastructure. All sovereign AI builds on American hyperscalers — Azure, AWS, Oracle, Google Cloud. China is structurally locked out of the region's tech stack for a generation.</div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-num mono">PILLAR VI</div>
+      <div class="pillar-title display">The Iran On-Ramp</div>
+      <div class="pillar-desc">A dormant accession protocol for a post-theocratic Iran — the Cyrus Accords. Objective criteria for Iranian membership: IAEA compliance, IRGC dissolution, recognition of Israel. Signals to the Iranian people that a path exists. Gives Arab states cover that this isn't anti-Iran — it's conditionally Iran-inclusive.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 6: CORE FOUR ═══════════ -->
+<div class="divider"></div>
+<section>
+  <div class="section-num mono reveal">06</div>
+  <h2 class="section-title display reveal">
+    Drop the freeloaders.<br><span style="color: var(--blue);">Keep the fighters.</span>
+  </h2>
+  <div class="reveal">
+    <p>
+      This doesn't mean abandoning Europe. It means <strong>upgrading</strong> the relationship. Keep the four European allies that actually matter — the ones that spend, fight, and share intelligence. Fold them into the ATO as the North Atlantic Pillar.
+    </p>
+  </div>
+
+  <div class="core-four reveal">
+    <div class="core-four-card">
+      <div class="core-four-flag">🇬🇧</div>
+      <div class="core-four-name mono">United Kingdom</div>
+    </div>
+    <div class="core-four-card">
+      <div class="core-four-flag">🇵🇱</div>
+      <div class="core-four-name mono">Poland</div>
+    </div>
+    <div class="core-four-card">
+      <div class="core-four-flag">🇫🇷</div>
+      <div class="core-four-name mono">France</div>
+    </div>
+    <div class="core-four-card">
+      <div class="core-four-flag">🇩🇪</div>
+      <div class="core-four-name mono">Germany</div>
+    </div>
+  </div>
+
+  <div class="reveal">
+    <p>
+      Five Eyes intelligence stays intact. Nuclear deterrence stays intact. The 28 countries treating American taxpayers like an ATM? They can form their own alliance or start paying.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ FINAL CTA ═══════════ -->
+<div class="divider"></div>
+<div class="final-cta">
+  <div class="section-title display reveal" style="font-size: clamp(36px, 6vw, 64px);">
+    The window is <span class="gold">open.</span><br>
+    History is <span class="gold">watching.</span>
+  </div>
+  <p class="reveal" style="max-width: 560px;">
+    The pieces are on the board. The deals exist. The military integration is running. The Gulf states are choosing America — for now. Convert handshakes into a treaty before the window closes and China fills the vacuum.
+  </p>
+  <p class="reveal" style="max-width: 560px;">
+    <strong>Build the Abraham Treaty Organization.<br>Replace NATO with something better.<br>Become the Architect King.</strong>
+  </p>
+  <div class="final-tagline mono reveal">
+    #ATO &nbsp; • &nbsp; #ABRAHAMTREATYORGANIZATION &nbsp; • &nbsp; #ARCHITECTKING
+  </div>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <p>A strategic proposal for American leadership. &copy; 2026</p>
+</footer>
+
+<!-- ═══════════ SCROLL REVEAL ═══════════ -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
